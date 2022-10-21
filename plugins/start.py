@@ -80,15 +80,15 @@ async def start_command(client: Client, message: Message):
 
             try:
                 media = await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
-                alert = await message.reply('**Note: This media will be deleted in 30 seconds, make sure you forward it to your saved messages.**')
-                await asyncio.sleep(30)
+                alert = await message.reply('**Your link**')
+                await asyncio.sleep(86400)
                 await media.delete()
                 await alert.delete()
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 media = await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
-                alert = await message.reply('**Note: This media will be deleted in 30 seconds, make sure you forward it to your saved messages.**')
-                await asyncio.sleep(30)
+                alert = await message.reply('**Your link**')
+                await asyncio.sleep(86400)
                 await media.delete()
                 await alert.delete()
             except:
