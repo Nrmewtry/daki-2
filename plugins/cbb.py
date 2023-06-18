@@ -12,7 +12,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("⚡ꜱᴇʀɪᴀʟ ᴀᴅᴅᴀ⚡", url="https://t.me/+ozMvFa6su881YmM1")
+                        InlineKeyboardButton("⚡𝐒𝐄𝐑𝐈𝐀𝐋 𝐀𝐃𝐃𝐀⚡", url="https://t.me/+ozMvFa6su881YmM1")
                     ],
                     [
                          InlineKeyboardButton("⚡𝙺𝙰𝙽𝙽𝙰𝙳𝙰 𝙲𝙷𝙰𝙽𝙽𝙴𝙻𝚂 𝙻𝙸𝙽𝙺⚡", url="https://t.me/SB_SERIALS")
