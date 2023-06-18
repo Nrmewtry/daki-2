@@ -80,7 +80,6 @@ async def start_command(client: Client, message: Message):
 
             try:
                 media = await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
-                alert = await message.reply('**Your link**')
                 await asyncio.sleep(5 * 24 * 60 * 60)
                 await media.delete()
                 await alert.delete()
