@@ -15,7 +15,7 @@ API_HASH = os.environ.get("API_HASH", "0f53ee8c576281995d621194aec588d8")
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001946672954"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "831370530 1852823985"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "831370530"))
 
 #Database 
 DB_URI = os.environ.get("DATABASE_URL", "postgres://abhyqmgp:xWR8ugCjF9fkgaMNtupG4d2uWskXuSzQ@satao.db.elephantsql.com/abhyqmgp")
@@ -29,7 +29,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "╔┓┏╦━━╦┓╔┓╔━━-\n║┗┛║┗━╣┃║┃║ ^ ^ ✦\n║┏┓║┏━╣┗╣┗╣╰╯║\n╚┛┗╩━━╩━╩━╩━━╝\n\n\n<b>Hello {first}\nI am a bot which will provide you files instantly which are shared in @Kan_Serial and @SB_SERIALS </b>\n\n⚠Kindly Please join my channel - Serial Adda and Kannada Channels Link / ದಯವಿಟ್ಟು ನನ್ನನ್ನು ಬಳಸಲು ಚಾನಲ್‌ಗೆ ಸೇರಿಕೊಳ್ಳಿ⚠")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "718979130").split()):
+    for x in (os.environ.get("ADMINS", "718979130 1852823985").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
