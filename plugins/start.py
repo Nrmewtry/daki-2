@@ -96,23 +96,29 @@ async def start_command(client: Client, message: Message):
         return
     else:
         reply_markup = InlineKeyboardMarkup(
-            [
+            [   
+                [
+                        InlineKeyboardButton("⚡𝐒𝐄𝐑𝐈𝐀𝐋 𝐀𝐃𝐃𝐀⚡", url="https://t.me/+ozMvFa6su881YmM1")
+                    ],
+                    [
+                         InlineKeyboardButton("⚡𝙺𝙰𝙽𝙽𝙰𝙳𝙰 𝙲𝙷𝙰𝙽𝙽𝙴𝙻𝚂 𝙻𝙸𝙽𝙺⚡", url="https://t.me/SB_SERIALS")
+                    ],
                 [
                     InlineKeyboardButton("😊 About Me", callback_data = "about"),
                     InlineKeyboardButton("🔒 Close", callback_data = "close")
                 ]
             ]
         )
-        await message.reply_text(
-            text = START_MSG.format(
-                first = message.from_user.first_name,
-                last = message.from_user.last_name,
-                username = None if not message.from_user.username else '@' + message.from_user.username,
-                mention = message.from_user.mention,
-                id = message.from_user.id
-            ),
+        await message.reply_photo(
+        photo="https://telegra.ph/file/4f04be88b4a4f3ed6a7a7.jpg",
+        caption=START_MSG.format(
+            first=message.from_user.first_name,
+            last=message.from_user.last_name,
+            username=None if not message.from_user.username else '@' + message.from_user.username,
+            mention=message.from_user.mention,
+            id=message.from_user.id
+        ),
             reply_markup = reply_markup,
-            disable_web_page_preview = True,
             quote = True
         )
         return
